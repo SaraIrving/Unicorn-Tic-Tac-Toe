@@ -28,9 +28,11 @@ function App() {
           {gameState.unicornTurn && <p>IT'S THE UNICORNS TURN!</p>}
           {gameState.unicornTurn === false && <p>IT'S THE CORGIS TURN!</p>}
         </div>
-      <Corgi/>
-      <Unicorn/>
-      <GameBoard/>
+        <p>The Score is: Unicorn: <span>{gameState.score.unicorn}</span> Corgi: <span>{gameState.score.corgi}</span></p>
+        <button onClick={event => setGameState(prev => {return {...prev, score: {unicorn: 0, corgi:0}}})}>RESET THE SCORE!</button>
+        <Corgi/>
+        <Unicorn/>
+        <GameBoard/>
       
       </body>
     </div>
