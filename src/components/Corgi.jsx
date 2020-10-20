@@ -3,7 +3,7 @@ import React from 'react'
 export default function Corgi () {
 
   return (
-    <img src="../images/corgicorn.png" alt="Corgi" />
+    <img className="playerIcon" src="../images/corgicorn.png" alt="Corgi" />
   )
 
 }
