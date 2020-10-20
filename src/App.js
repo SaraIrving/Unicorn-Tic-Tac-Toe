@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Corgi from './components/Corgi'
+import Corgi from './components/Corgi';
+import Unicorn from './components/Unicorn';
+import Box from './components/Box';
+import GameBoard from './components/GameBoard';
 
 function App() {
   return (
@@ -15,7 +18,10 @@ function App() {
       </header>
       
       <body>
+        <Box/>
       <Corgi/>
+      <Unicorn/>
+      <GameBoard/>
       
       </body>
     </div>
