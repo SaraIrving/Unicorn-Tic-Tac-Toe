@@ -7,7 +7,7 @@ export default function GameBoard (props) {
   let noNestArray = ["U", "N", "N", "N", "N", "N", "N", "N", "N"];
 
   return (
-    <div>
+    <div className="gameBoardWrapper">
       {noNestArray.map(box => {
         if (box === "U") {
           return (<Box image="U"></Box>)
