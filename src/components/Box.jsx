@@ -13,7 +13,7 @@ export default function Box (props) {
   }
 
   return (
-  <button >{handleBoxClick()}</button>
+  <button className="boxButton">{handleBoxClick()}</button>
   )
 
 
