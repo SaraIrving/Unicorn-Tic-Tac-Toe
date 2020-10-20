@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-export default function useGameData () {
+export default function useGameState () {
 
   const [gameState, setGameState] = useState({unicornTurn: true, 
                                               gameBoard: ["N", "N", "N", "N", "N", "N", "N", "N", "N"], 
