@@ -14,12 +14,22 @@ export default function Box (props) {
     //   return null;
     // }
 
-    //setGameState(prev => {return {...prev, unicornTurn: false}})
-
+    console.log("YOU clicked a BOX!")
+    console.log("unicornTurn before setState is = ", gameState.unicornTurn)
     if (gameState.unicornTurn) {
-      return <Unicorn/>
+      setGameState(prev => {return {...prev, unicornTurn: false, score: {unicorn: 7, corgi:7}}})
+    } else if (gameState.unicornTurn === false) {
+      if (gameState.unicornTurn) {
+        setGameState(prev => {return {...prev, unicornTurn: true, score: {unicorn: 6, corgi:6}}})
+      }
     }
+  
+    console.log("unicornTurn after setState is = ", gameState.unicornTurn)
 
+    // if (gameState.unicornTurn) {
+    //   return <Unicorn/>
+    // }
+   
     
 
 
@@ -27,8 +37,9 @@ export default function Box (props) {
 
   return (
     <div>
-      {props.image === "U" && <button className="boxButton"><Unicorn/></button>}
-      {props.image === "N" && <button className="boxButton"></button>}
+      {props.image === "U" && <button className="boxButton" onClick={event =>handleBoxClick()}><Unicorn/></button>}
+      {props.image === "C" && <button className="boxButton" onClick={event =>handleBoxClick()}><Corgi/></button>}
+      {props.image === "N" && <button className="boxButton" onClick={event =>handleBoxClick()}></button>}
 
     </div>
 
