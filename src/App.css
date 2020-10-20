@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.playerIcon {
+  max-width: 100px;
+  max-height: 100px;
+}
