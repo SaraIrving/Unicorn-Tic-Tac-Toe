@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Corgi from './components/Corgi'
 
 function App() {
   return (
@@ -12,6 +13,11 @@ function App() {
         </p>
       
       </header>
+      
+      <body>
+      <Corgi/>
+      
+      </body>
     </div>
   );
 }
