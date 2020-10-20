@@ -11,7 +11,7 @@ export default function useGameState () {
 
   return {
     gameState, 
-    useGameState
+    setGameState
   }
 
 
