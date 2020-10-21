@@ -5,7 +5,7 @@ import useGameState from '../hooks/useGameState';
 
 export default function Box (props) {
 
-  const {gameState, setGameState} = useGameState();
+  //const {gameState, setGameState} = useGameState();
 
   function handleBoxClick () {
     // if (props.image === "U") {
@@ -15,7 +15,7 @@ export default function Box (props) {
     // }
 
     console.log("YOU clicked a BOX!")
-    console.log("unicornTurn before setState is = ", gameState.unicornTurn)
+    //console.log("unicornTurn before setState is = ", gameState.unicornTurn)
 
     // useEffect(() => {
     //   setGameState(prev => {return {...prev, unicornTurn: false, score: {unicorn: 7, corgi:7}}})
@@ -29,9 +29,9 @@ export default function Box (props) {
       
     // }
 
-    setGameState(prev => {return {...prev, score: {unicorn: 7, corgi:7}}})
+    
   
-    console.log("unicornTurn after setState is = ", gameState.unicornTurn)
+    //console.log("unicornTurn after setState is = ", gameState.unicornTurn)
 
     // if (gameState.unicornTurn) {
     //   return <Unicorn/>
@@ -42,11 +42,22 @@ export default function Box (props) {
 
   }
 
+  function determineTurn () {
+    if (props.gameState.unicornTurn === true) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  const turn = determineTurn();
+  console.log('turn = ', turn);
+
   return (
     <div>
       {props.image === "U" && <button className="boxButton" onClick={event =>handleBoxClick()}><Unicorn/></button>}
       {props.image === "C" && <button className="boxButton" onClick={event =>handleBoxClick()}><Corgi/></button>}
-      {props.image === "N" && <button className="boxButton" onClick={event => handleBoxClick()}></button>}
+      {props.image === "N" && <button className="boxButton" onClick={event => props.setGameState(prev => {return {...prev, unicornTurn: turn}})}></button>}
 
     </div>
 
