@@ -32,7 +32,7 @@ function App() {
         <button onClick={event => setGameState(prev => {return {...prev, score: {unicorn: 0, corgi:0}}})}>RESET THE SCORE!</button>
         <Corgi/>
         <Unicorn/>
-        <GameBoard/>
+        <GameBoard gameState={gameState} setGameState={setGameState}/>
       
       </body>
     </div>
