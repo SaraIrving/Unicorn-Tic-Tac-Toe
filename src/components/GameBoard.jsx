@@ -13,8 +13,33 @@ export default function GameBoard (props) {
 
 
 
+  function determineWinner() {
+    //consider putting this function inside a useEffect that runs based on any changes to the gameBoard array in gameState????
+
+    // given each box that is clicked, evaluate all possible ways it could win
+    //ROWS:
+    // if it's in the first column, are the next two consecutive indexs also the same image? 
+    console.log("DETERMINE WINNER RUNS")
+
+    if (props.gameState.gameBoard[0].display === "U" || props.gameState.gameBoard[3].display === "U" || props.gameState.gameBoard[6].display === "U") {
+      
+      if (props.gameState.gameBoard[1].display === "U" && props.gameState.gameBoard[2].display === "U") {
+        console.log("IN THE RETURN UNICORN WINS")
+        return "unicorn wins"
+      }
+      
+    }
+    return "in progress"
+
+  }
+
+  let winner = determineWinner();
+
+
   return (
-    <div className="gameBoardWrapper">
+    <div>
+      {winner === "unicorn wins" && <h2>UNICORN WINS!!!!</h2>}
+      <div className="gameBoardWrapper">
       {props.gameState.gameBoard.map(({index, display}) => {
         
         if (display === "U") {
@@ -28,6 +53,8 @@ export default function GameBoard (props) {
        
     })}
     </div>
+    </div>
+    
   )
 
 
