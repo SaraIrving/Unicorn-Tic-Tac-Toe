@@ -4,8 +4,8 @@ import useGameState from '../hooks/useGameState';
 
 export default function GameBoard (props) {
 
-  let boardArray = [["U", "U", "N"], ["N", "N", "N"], ["N", "N", "N"]]
-  let noNestArray = ["U", "N", "N", "N", "N", "N", "N", "N", "N"];
+  // let boardArray = [["U", "U", "N"], ["N", "N", "N"], ["N", "N", "N"]]
+  // let noNestArray = ["U", "N", "N", "N", "N", "N", "N", "N", "N"];
 
   //const {gameState, setGameState} = useGameState();
 
@@ -18,11 +18,11 @@ export default function GameBoard (props) {
       {props.gameState.gameBoard.map(({index, display}) => {
         
         if (display === "U") {
-          return (<Box image={display} key={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
+          return (<Box image={display} key={index} id ={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
         } else if (display === "N") {
-          return (<Box image={display} key={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
+          return (<Box image={display} key={index} id ={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
         } else if (display === "C") {
-          return (<Box image={display} key={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
+          return (<Box image={display} key={index} id ={index} gameState={props.gameState} setGameState={props.setGameState}></Box>)
         }
         return (<p>A ROW!</p>)
        
