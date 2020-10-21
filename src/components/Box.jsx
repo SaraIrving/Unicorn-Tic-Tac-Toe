@@ -49,15 +49,32 @@ export default function Box (props) {
       return true;
     }
   }
-
   const turn = determineTurn();
-  console.log('turn = ', turn);
+  
+  function determineImage () {
+    // if (props.image === "N") {
+    //   return "NULL";
+    // }
+    console.log('props = ', props)
+    console.log('props.gameState.gameBoard = ', props.gameState.gameBoard)
+    console.log('props.id = ', props.id)
+    console.log(props.gameState.gameBoard[props.id])
+
+    if(props.gameState.gameBoard[props.id].display === "U") {
+      return <Unicorn/>;
+    } else if (props.gameState.gameBoard[props.id].display === "C") {
+      return <Corgi/>;
+    } 
+  }
+
+  const boxImage = determineImage();
+  console.log('boximage = ', boxImage);
 
   return (
     <div>
       {props.image === "U" && <button className="boxButton" onClick={event =>handleBoxClick()}><Unicorn/></button>}
       {props.image === "C" && <button className="boxButton" onClick={event =>handleBoxClick()}><Corgi/></button>}
-      {props.image === "N" && <button className="boxButton" onClick={event => props.setGameState(prev => {return {...prev, unicornTurn: turn}})}></button>}
+  {props.image === "N" && <button className="boxButton" onClick={event => props.setGameState(prev => {return {...prev, unicornTurn: turn}})}>{boxImage}</button>}
 
     </div>
 
