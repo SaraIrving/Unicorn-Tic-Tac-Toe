@@ -69,23 +69,15 @@ export default function Box (props) {
     return updatedGameBoard;
   }
 
-  // let newArray = updateGameBoard();
-  // console.log("newArray = ", newArray);
   
-
   return (
     <div>
       {props.image === "U" && <button className="boxButton" onClick={event =>handleBoxClick()}><Unicorn/></button>}
       {props.image === "C" && <button className="boxButton" onClick={event =>handleBoxClick()}><Corgi/></button>}
-  {props.image === "N" && <button className="boxButton" onClick={event => props.setGameState(prev => {return {...prev, unicornTurn: turn, gameBoard: updateGameBoard()}})}>{boxImage}</button>}
-
+      {props.image === "N" && <button className="boxButton" onClick={event => props.setGameState(prev => {return {...prev, unicornTurn: turn, gameBoard: updateGameBoard()}})}>{boxImage}</button>}
     </div>
-
-    // <button className="boxButton"></button>
   
   )
-
-
 
 
 }
