@@ -94,6 +94,10 @@ export default function GameBoard (props) {
         return "corgi wins";
       }
     }
+
+
+
+    //return "no one wins"
     
     
 
@@ -103,9 +107,13 @@ export default function GameBoard (props) {
 
 
   return (
-    <div>
+    <div className="gameBoard">
+      <div className="winnerAnnouncementWrapper">
       {winner === "unicorn wins" && <h2>UNICORN WINS!!!!</h2>}
       {winner === "corgi wins" && <h2>CORGI WINS!!!!</h2>}
+      {winner === "no one wins" && <h2>LOSERS!!!!</h2>}
+      </div>
+   
       <div className="gameBoardWrapper">
       {props.gameState.gameBoard.map(({index, display}) => {
         
