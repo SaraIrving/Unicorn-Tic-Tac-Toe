@@ -104,7 +104,11 @@ export default function GameBoard (props) {
   }
 
   let winner = determineWinner();
-
+  
+  if (winner === "unicorn wins") {
+    const currentUniScore = props.gameState.score.unicorn + 1;
+    props.setGameState(prev => {return {...prev, score: {unicorn: currentUniScore, corgi: prev.score.corgi}}})
+  }
 
   return (
     <div className="gameBoard">
