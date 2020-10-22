@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Box from './Box'
 import useGameState from '../hooks/useGameState';
 
@@ -41,6 +41,7 @@ export default function GameBoard (props) {
       if (props.gameState.gameBoard[1].display === "C" && props.gameState.gameBoard[2].display === "C") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
+        console.log("WERE HERE")
         return "corgi wins"
       } else if (props.gameState.gameBoard[4].display === "C" && props.gameState.gameBoard[5].display === "C") {
         return "corgi wins";
@@ -103,16 +104,26 @@ export default function GameBoard (props) {
 
   }
 
-  let winner = determineWinner();
+  let winner;
+
+  useEffect(() => {
+    console.log("INSIDE THE USEEFFECT")
+    winner = determineWinner();
+  }, [props.gameState.gameBoard])
+
+  console.log('winner = ', winner)
+
+  //let winner = determineWinner();
   
-  if (winner === "unicorn wins") {
-    const currentUniScore = props.gameState.score.unicorn + 1;
-    props.setGameState(prev => {return {...prev, score: {unicorn: currentUniScore, corgi: prev.score.corgi}}})
-  }
+  // if (winner === "unicorn wins") {
+  //   const currentUniScore = props.gameState.score.unicorn + 1;
+  //   props.setGameState(prev => {return {...prev, score: {unicorn: currentUniScore, corgi: prev.score.corgi}}})
+  // }
 
   return (
     <div className="gameBoard">
       <div className="winnerAnnouncementWrapper">
+        {console.log("what is winner = ", winner)}
       {winner === "unicorn wins" && <h2>UNICORN WINS!!!!</h2>}
       {winner === "corgi wins" && <h2>CORGI WINS!!!!</h2>}
       {winner === "no one wins" && <h2>LOSERS!!!!</h2>}
