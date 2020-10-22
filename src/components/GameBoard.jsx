@@ -27,6 +27,8 @@ export default function GameBoard (props) {
       if (props.gameState.gameBoard[1].display === "U" && props.gameState.gameBoard[2].display === "U") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
+        console.log("IN HORIZONTAL UNI WINNER before setState call")
+        props.setGameState(prev => {return {...prev, score: {unicorn: 8, corgi: 8}}})
         return "unicorn wins"
       } else if (props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[5].display === "U") {
         return "unicorn wins";
