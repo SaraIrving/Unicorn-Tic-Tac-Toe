@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Corgi from './components/Corgi';
 import Unicorn from './components/Unicorn';
+import PlayerTracker from './components/PlayerTracker';
 import Box from './components/Box';
 import GameBoard from './components/GameBoard';
 import useGameState from './hooks/useGameState';
@@ -43,6 +44,7 @@ function App() {
         <button onClick={event => setGameState(prev => {return {...prev, gameBoard: gameBoardReset, winnerAnnouncement: null}})}>Play Again!</button>
         <Corgi/>
         <Unicorn/>
+        <PlayerTracker gameState={gameState} setGameState={setGameState}/>
         <GameBoard gameState={gameState} setGameState={setGameState}/>
       
       </body>
