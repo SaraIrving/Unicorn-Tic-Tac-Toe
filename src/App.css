@@ -42,6 +42,10 @@
   max-height: 100px;
 }
 
+.playerWrapper {
+  height: 150px;
+}
+
 .boxButton {
   width: 150px;
   height: 150px;
