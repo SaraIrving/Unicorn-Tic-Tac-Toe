@@ -31,9 +31,11 @@ export default function GameBoard (props) {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins"
       } else if (props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[5].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       } else if (props.gameState.gameBoard[7].display === "U" && props.gameState.gameBoard[8].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       }
     }
 
@@ -44,11 +46,14 @@ export default function GameBoard (props) {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
         console.log("WERE HERE")
-        return "corgi wins"
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins"
       } else if (props.gameState.gameBoard[4].display === "C" && props.gameState.gameBoard[5].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       } else if (props.gameState.gameBoard[7].display === "C" && props.gameState.gameBoard[8].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       }
     }
 
@@ -58,11 +63,14 @@ export default function GameBoard (props) {
       if (props.gameState.gameBoard[3].display === "U" && props.gameState.gameBoard[6].display === "U") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
-        return "unicorn wins"
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins"
       } else if (props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[7].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       } else if (props.gameState.gameBoard[5].display === "U" && props.gameState.gameBoard[8].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       }
     }
 
@@ -72,29 +80,36 @@ export default function GameBoard (props) {
       if (props.gameState.gameBoard[3].display === "C" && props.gameState.gameBoard[6].display === "C") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
-        return "corgi wins"
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins"
       } else if (props.gameState.gameBoard[4].display === "C" && props.gameState.gameBoard[7].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       } else if (props.gameState.gameBoard[5].display === "C" && props.gameState.gameBoard[8].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       }
     }
 
     //determine diagonal unicorn win options
     if (props.gameState.gameBoard[4].display === "U") {
       if (props.gameState.gameBoard[0].display === "U" && props.gameState.gameBoard[8].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       } else if (props.gameState.gameBoard[2].display === "U" && props.gameState.gameBoard[6].display === "U") {
-        return "unicorn wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
+        //return "unicorn wins";
       }
     }
 
     //determine diagonal corgi win options
     if (props.gameState.gameBoard[4].display === "C") {
       if (props.gameState.gameBoard[0].display === "C" && props.gameState.gameBoard[8].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       } else if (props.gameState.gameBoard[2].display === "C" && props.gameState.gameBoard[6].display === "C") {
-        return "corgi wins";
+        props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
+        //return "corgi wins";
       }
     }
 
@@ -125,12 +140,13 @@ export default function GameBoard (props) {
   return (
     <div className="gameBoard">
       <div className="winnerAnnouncementWrapper">
-        {console.log("what is winner = ", winner)}
+        {/* {console.log("what is winner = ", winner)}
       {winner === "unicorn wins" && <h2>UNICORN WINS!!!!</h2>}
       {winner === "corgi wins" && <h2>CORGI WINS!!!!</h2>}
       {winner === "no one wins" && <h2>LOSERS!!!!</h2>}
-      {props.gameState.winnerAnnouncement === null && <p>IT's NULL!</p>}
+      {props.gameState.winnerAnnouncement === null && <p>IT's NULL!</p>} */}
       {props.gameState.winnerAnnouncement === "U" && <p>IT's a Unicorn winner!</p>}
+      {props.gameState.winnerAnnouncement === "C" && <p>IT's a Corgicorn winner!</p>}
       </div>
    
       <div className="gameBoardWrapper">
