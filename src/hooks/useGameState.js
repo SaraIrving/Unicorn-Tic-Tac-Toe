@@ -13,7 +13,9 @@ export default function useGameState () {
                                                           {index: 6, display: "N"}, 
                                                           {index: 7, display: "N"}, 
                                                           {index: 8, display: "N"}], 
-                                              score: {unicorn: 1, corgi:1}});
+                                              score: {unicorn: 1, corgi:1},
+                                              winnerAnnouncement: null} 
+                                              );
 
 
 
