@@ -7,6 +7,7 @@ import PlayerTracker from './components/PlayerTracker';
 import Box from './components/Box';
 import GameBoard from './components/GameBoard';
 import useGameState from './hooks/useGameState';
+import WinnerAnnouncement from './components/WinnerAnnouncement';
 
 function App() {
 
@@ -44,7 +45,8 @@ function App() {
         <button onClick={event => setGameState(prev => {return {...prev, gameBoard: gameBoardReset, winnerAnnouncement: null}})}>Play Again!</button>
         <Corgi/>
         <Unicorn/>
-        <PlayerTracker gameState={gameState} setGameState={setGameState}/>
+        {gameState.winnerAnnouncement === null && <PlayerTracker gameState={gameState} setGameState={setGameState}/>}
+       {gameState.winnerAnnouncement !== null && <WinnerAnnouncement gameState={gameState} setGameState={setGameState}/>}
         <GameBoard gameState={gameState} setGameState={setGameState}/>
       
       </body>
