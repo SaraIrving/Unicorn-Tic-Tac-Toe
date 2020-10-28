@@ -59,6 +59,11 @@ function App() {
         <GameBoard gameState={gameState} setGameState={setGameState}/>
       
       </body>
+      <footer>
+        <p>
+          Ticking Tacky Toes since 2020.
+        </p>
+      </footer>
     </div>
   );
 }
