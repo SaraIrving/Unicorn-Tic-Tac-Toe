@@ -1,4 +1,6 @@
 .App {
+  width: 100vw;
+  height: 100vw;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: green;
@@ -19,6 +21,7 @@
 .App-header {
   background-color: #282c34;
   height: 100px;
+  /* min-width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +55,7 @@
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   border: 3px solid fuchsia;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
   padding:10px;
 }
 
@@ -109,7 +112,7 @@
 
 
 .gameBoardWrapper {
-  width: 70%;
+  width: 510px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -120,6 +123,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* width: auto; */
   
 }
 
