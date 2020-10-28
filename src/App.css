@@ -19,9 +19,9 @@
   }
 } */
 
-.App-header {
-  background-color: #282c34;
-  height: 100px;
+.App-header, footer {
+  background-color: darkgreen;
+  height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +149,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 
