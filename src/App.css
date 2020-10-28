@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: green;
+  background-color: beige;
 }
 
 .App-logo {
@@ -22,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: palegreen;
 }
 
 .App-link {
@@ -43,13 +45,30 @@
   max-height: 100px;
 }
 
+.gameBoardTopper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: 3px solid fuchsia;
+  margin: 10px;
+  padding:10px;
+}
+
+.gameBoardTopper > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
 .playerWrapper {
   height: 150px;
   width: 250px;
-  background-color: fuchsia;
+  /* background-color: fuchsia; */
   margin: 10px;
   padding:20px;
-  color: white;
+  /* color: white; */
+  color: green;
   font-size: larger;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -62,10 +81,12 @@
   margin: 10px;
   padding: 20px;
   color: fuchsia;
-  border: 3px dotted fuchsia; 
+  border: 3px dotted green; 
   font-size: larger;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+
 
 .boxButton {
   width: 150px;
@@ -100,4 +121,15 @@ body {
   align-items: center;
   flex-direction: column;
   
+}
+
+button {
+  background-color: fuchsia;
+  color: green;
+  padding: 5px;
+  margin: 10px;
+  font-size: medium;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: 3px solid palegreen;
+  border-radius: 15px;
 }
