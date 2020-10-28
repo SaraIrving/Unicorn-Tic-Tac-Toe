@@ -51,6 +51,15 @@
 
 }
 
+
+.winnerWrapper {
+  height: 150px;
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  color: fuchsia;
+}
+
 .boxButton {
   width: 150px;
   height: 150px;
