@@ -30,7 +30,7 @@ function App() {
       <header className="App-header">
 
         <p>
-          Tick Tack Toe APP!
+          Tick Tack Toe: Unicorn vs. Corgicorn!
         </p>
       
       </header>
@@ -40,13 +40,22 @@ function App() {
           {gameState.unicornTurn && <p>IT'S THE UNICORNS TURN!</p>}
           {gameState.unicornTurn === false && <p>IT'S THE CORGIS TURN!</p>}
         </div> */}
-        <p>The Score is: Unicorn: <span>{gameState.score.unicorn}</span> Corgi: <span>{gameState.score.corgi}</span></p>
-        <button onClick={event => setGameState(prev => {return {...prev, score: {unicorn: 0, corgi:0}}})}>RESET THE SCORE!</button>
-        <button onClick={event => setGameState(prev => {return {...prev, gameBoard: gameBoardReset, winnerAnnouncement: null}})}>Play Again!</button>
-        {/* <Corgi/>
-        <Unicorn/> */}
-        {gameState.winnerAnnouncement === null && <PlayerTracker gameState={gameState} setGameState={setGameState}/>}
-       {gameState.winnerAnnouncement !== null && <WinnerAnnouncement gameState={gameState} setGameState={setGameState}/>}
+        <div className="gameBoardTopper">
+          <div>
+            {gameState.winnerAnnouncement === null && <PlayerTracker gameState={gameState} setGameState={setGameState}/>}
+            {gameState.winnerAnnouncement !== null && <WinnerAnnouncement gameState={gameState} setGameState={setGameState}/>}
+          </div>
+          <div>
+            <p>The Score is: Unicorn: <span>{gameState.score.unicorn}</span> Corgi: <span>{gameState.score.corgi}</span></p>
+            <button onClick={event => setGameState(prev => {return {...prev, score: {unicorn: 0, corgi:0}}})}>RESET THE SCORE!</button>
+            <button onClick={event => setGameState(prev => {return {...prev, gameBoard: gameBoardReset, winnerAnnouncement: null}})}>Play Again!</button>
+          </div>
+      
+          {/* <Corgi/>
+          <Unicorn/> */}
+        </div>
+        
+        
         <GameBoard gameState={gameState} setGameState={setGameState}/>
       
       </body>
