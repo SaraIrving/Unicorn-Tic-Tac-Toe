@@ -1,4 +1,4 @@
-Unicorn vs Corgicorn Tick Tack Toe is a whimsical play on the classic game. This two player game allows players to keep track of the overall score across multiple rounds. 
+Unicorn vs Corgicorn Tic Tac Toe is a whimsical play on the classic game. This two player game allows players to keep track of the overall score across multiple rounds. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,10 +6,10 @@ This project was hosted on Git pages with guidance found in this article (https:
 
 
 ## Screenshots
-### Unicorn vs Corgicorn Tick Tack Toe
+### Unicorn vs Corgicorn Tic Tac Toe
 !["Go Unicorns"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tick-Tack-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%204.10.55%20PM.png)
 
-### Responsive Styling ensures no aminals get squashed no matter your screen
+### Responsive Styling ensures no animals get squashed no matter your screen size
 !["Corgicorns Forever!"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tick-Tack-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%204.11.43%20PM.png)
 
 

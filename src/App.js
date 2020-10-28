@@ -30,7 +30,7 @@ function App() {
       <header className="App-header">
 
         <p>
-          Tick Tack Toe: Unicorn vs. Corgicorn!
+          Tic Tac Toe: Unicorn vs. Corgicorn!
         </p>
       
       </header>
