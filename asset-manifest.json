@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Unicorn-Tick-Tack-Toe/static/css/main.0458d6d4.chunk.css",
-    "main.js": "/Unicorn-Tick-Tack-Toe/static/js/main.2864ac7b.chunk.js",
-    "main.js.map": "/Unicorn-Tick-Tack-Toe/static/js/main.2864ac7b.chunk.js.map",
-    "runtime-main.js": "/Unicorn-Tick-Tack-Toe/static/js/runtime-main.ace5258f.js",
-    "runtime-main.js.map": "/Unicorn-Tick-Tack-Toe/static/js/runtime-main.ace5258f.js.map",
-    "static/js/2.587c8b49.chunk.js": "/Unicorn-Tick-Tack-Toe/static/js/2.587c8b49.chunk.js",
-    "static/js/2.587c8b49.chunk.js.map": "/Unicorn-Tick-Tack-Toe/static/js/2.587c8b49.chunk.js.map",
-    "index.html": "/Unicorn-Tick-Tack-Toe/index.html",
-    "precache-manifest.78b1cd1ab89fd7d7b11f85555d3c9a3d.js": "/Unicorn-Tick-Tack-Toe/precache-manifest.78b1cd1ab89fd7d7b11f85555d3c9a3d.js",
-    "service-worker.js": "/Unicorn-Tick-Tack-Toe/service-worker.js",
-    "static/css/main.0458d6d4.chunk.css.map": "/Unicorn-Tick-Tack-Toe/static/css/main.0458d6d4.chunk.css.map",
-    "static/js/2.587c8b49.chunk.js.LICENSE.txt": "/Unicorn-Tick-Tack-Toe/static/js/2.587c8b49.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/Unicorn-Tick-Tack-Toe/static/media/logo.5d5d9eef.svg"
+    "main.css": "/Unicorn-Tic-Tac-Toe/static/css/main.0458d6d4.chunk.css",
+    "main.js": "/Unicorn-Tic-Tac-Toe/static/js/main.b85ddb5f.chunk.js",
+    "main.js.map": "/Unicorn-Tic-Tac-Toe/static/js/main.b85ddb5f.chunk.js.map",
+    "runtime-main.js": "/Unicorn-Tic-Tac-Toe/static/js/runtime-main.d765c049.js",
+    "runtime-main.js.map": "/Unicorn-Tic-Tac-Toe/static/js/runtime-main.d765c049.js.map",
+    "static/js/2.587c8b49.chunk.js": "/Unicorn-Tic-Tac-Toe/static/js/2.587c8b49.chunk.js",
+    "static/js/2.587c8b49.chunk.js.map": "/Unicorn-Tic-Tac-Toe/static/js/2.587c8b49.chunk.js.map",
+    "index.html": "/Unicorn-Tic-Tac-Toe/index.html",
+    "precache-manifest.39d244bbfdc93de9b111e2f3c681c4fa.js": "/Unicorn-Tic-Tac-Toe/precache-manifest.39d244bbfdc93de9b111e2f3c681c4fa.js",
+    "service-worker.js": "/Unicorn-Tic-Tac-Toe/service-worker.js",
+    "static/css/main.0458d6d4.chunk.css.map": "/Unicorn-Tic-Tac-Toe/static/css/main.0458d6d4.chunk.css.map",
+    "static/js/2.587c8b49.chunk.js.LICENSE.txt": "/Unicorn-Tic-Tac-Toe/static/js/2.587c8b49.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Unicorn-Tic-Tac-Toe/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ace5258f.js",
+    "static/js/runtime-main.d765c049.js",
     "static/js/2.587c8b49.chunk.js",
     "static/css/main.0458d6d4.chunk.css",
-    "static/js/main.2864ac7b.chunk.js"
+    "static/js/main.b85ddb5f.chunk.js"
   ]
 }
