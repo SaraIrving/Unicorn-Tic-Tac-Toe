@@ -7,10 +7,10 @@ This project was hosted on Git pages with guidance found in this article (https:
 
 ## Screenshots
 ### Unicorn vs Corgicorn Tic Tac Toe
-!["Go Unicorns"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tick-Tack-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%204.10.55%20PM.png)
+!["Go Unicorns"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tic-Tac-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%205.15.44%20PM.png)
 
 ### Responsive Styling ensures no animals get squashed no matter your screen size
-!["Corgicorns Forever!"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tick-Tack-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%204.11.43%20PM.png)
+!["Corgicorns Forever!"](https://raw.githubusercontent.com/SaraIrving/Unicorn-Tic-Tac-Toe/master/public/images/Screen%20Shot%202020-10-28%20at%205.16.16%20PM.png)
 
 
 ## Available Scripts
