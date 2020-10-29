@@ -58,38 +58,38 @@ export default function GameBoard (props) {
     }
 
     //determine vertical unicorn win options
-    if (props.gameState.gameBoard[0].display === "U" || props.gameState.gameBoard[1].display === "U" || props.gameState.gameBoard[2].display === "U") {
+    //if (props.gameState.gameBoard[0].display === "U" || props.gameState.gameBoard[1].display === "U" || props.gameState.gameBoard[2].display === "U") {
       
-      if (props.gameState.gameBoard[3].display === "U" && props.gameState.gameBoard[6].display === "U") {
+      if (props.gameState.gameBoard[0].display === "U"  && props.gameState.gameBoard[3].display === "U" && props.gameState.gameBoard[6].display === "U") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins"
-      } else if (props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[7].display === "U") {
+      } else if (props.gameState.gameBoard[1].display === "U" && props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[7].display === "U") {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins";
-      } else if (props.gameState.gameBoard[5].display === "U" && props.gameState.gameBoard[8].display === "U") {
+      } else if (props.gameState.gameBoard[2].display === "U" && props.gameState.gameBoard[5].display === "U" && props.gameState.gameBoard[8].display === "U") {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins";
       }
-    }
+    //}
 
     //determine vertical corgi win options
-    if (props.gameState.gameBoard[0].display === "C" || props.gameState.gameBoard[1].display === "C" || props.gameState.gameBoard[2].display === "C") {
+    //if (props.gameState.gameBoard[0].display === "C" || props.gameState.gameBoard[1].display === "C" || props.gameState.gameBoard[2].display === "C") {
       
-      if (props.gameState.gameBoard[3].display === "C" && props.gameState.gameBoard[6].display === "C") {
+      if (props.gameState.gameBoard[0].display === "C" && props.gameState.gameBoard[3].display === "C" && props.gameState.gameBoard[6].display === "C") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
         //return "corgi wins"
-      } else if (props.gameState.gameBoard[4].display === "C" && props.gameState.gameBoard[7].display === "C") {
+      } else if (props.gameState.gameBoard[1].display === "C" && props.gameState.gameBoard[4].display === "C" && props.gameState.gameBoard[7].display === "C") {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
         //return "corgi wins";
-      } else if (props.gameState.gameBoard[5].display === "C" && props.gameState.gameBoard[8].display === "C") {
+      } else if (props.gameState.gameBoard[2].display === "C" && props.gameState.gameBoard[5].display === "C" && props.gameState.gameBoard[8].display === "C") {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
         //return "corgi wins";
       }
-    }
+    //}
 
     //determine diagonal unicorn win options
     if (props.gameState.gameBoard[4].display === "U") {
