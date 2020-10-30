@@ -4,30 +4,13 @@ import useGameState from '../hooks/useGameState';
 
 export default function GameBoard (props) {
 
-  // let boardArray = [["U", "U", "N"], ["N", "N", "N"], ["N", "N", "N"]]
-  // let noNestArray = ["U", "N", "N", "N", "N", "N", "N", "N", "N"];
-
-  //const {gameState, setGameState} = useGameState();
-
-  //need to work out how to give each Box an individual key that we can use to relate it with the index of the letter that it represents in the gameBoard array in state, maybe make game board array an array of objects with key value pairs of a numerical key and a alphabetical value??
-
-
-
   function determineWinner() {
     //consider putting this function inside a useEffect that runs based on any changes to the gameBoard array in gameState????
-
-    // given each box that is clicked, evaluate all possible ways it could win
-    //ROWS:
-    // if it's in the first column, are the next two consecutive indexs also the same image? 
-    console.log("DETERMINE WINNER RUNS")
 
     //determine horizontal unicorn win options
     if (props.gameState.gameBoard[0].display === "U" || props.gameState.gameBoard[3].display === "U" || props.gameState.gameBoard[6].display === "U") {
       
       if (props.gameState.gameBoard[1].display === "U" && props.gameState.gameBoard[2].display === "U") {
-        //console.log("IN THE RETURN UNICORN WINS")
-        //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
-        //console.log("IN HORIZONTAL UNI WINNER before setState call")
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins"
       } else if (props.gameState.gameBoard[4].display === "U" && props.gameState.gameBoard[5].display === "U") {
@@ -43,8 +26,6 @@ export default function GameBoard (props) {
     if (props.gameState.gameBoard[0].display === "C" || props.gameState.gameBoard[3].display === "C" || props.gameState.gameBoard[6].display === "C") {
       
       if (props.gameState.gameBoard[1].display === "C" && props.gameState.gameBoard[2].display === "C") {
-        //console.log("IN THE RETURN UNICORN WINS")
-        //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
         console.log("WERE HERE")
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
         //return "corgi wins"
@@ -56,9 +37,6 @@ export default function GameBoard (props) {
         //return "corgi wins";
       }
     }
-
-    //determine vertical unicorn win options
-    //if (props.gameState.gameBoard[0].display === "U" || props.gameState.gameBoard[1].display === "U" || props.gameState.gameBoard[2].display === "U") {
       
       if (props.gameState.gameBoard[0].display === "U"  && props.gameState.gameBoard[3].display === "U" && props.gameState.gameBoard[6].display === "U") {
         //console.log("IN THE RETURN UNICORN WINS")
@@ -72,11 +50,9 @@ export default function GameBoard (props) {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn + 1, corgi: prev.score.corgi}, winnerAnnouncement: "U"}})
         //return "unicorn wins";
       }
-    //}
+    
 
-    //determine vertical corgi win options
-    //if (props.gameState.gameBoard[0].display === "C" || props.gameState.gameBoard[1].display === "C" || props.gameState.gameBoard[2].display === "C") {
-      
+  
       if (props.gameState.gameBoard[0].display === "C" && props.gameState.gameBoard[3].display === "C" && props.gameState.gameBoard[6].display === "C") {
         //console.log("IN THE RETURN UNICORN WINS")
         //props.setGameState(prev => {return {...prev, score: {unicorn: 2, corgi: 0}}})
@@ -89,7 +65,6 @@ export default function GameBoard (props) {
         props.setGameState(prev => {return {...prev, score: {unicorn: prev.score.unicorn, corgi: prev.score.corgi + 1}, winnerAnnouncement: "C"}})
         //return "corgi wins";
       }
-    //}
 
     //determine diagonal unicorn win options
     if (props.gameState.gameBoard[4].display === "U") {
@@ -112,43 +87,18 @@ export default function GameBoard (props) {
         //return "corgi wins";
       }
     }
-
-
-
-    //return "no one wins"
-    
-    
-
   }
 
   let winner;
 
   useEffect(() => {
-    console.log("INSIDE THE USEEFFECT")
     winner = determineWinner();
   }, [props.gameState.gameBoard])
 
-  console.log('winner = ', winner)
-
-  //let winner = determineWinner();
-  
-  // if (winner === "unicorn wins") {
-  //   const currentUniScore = props.gameState.score.unicorn + 1;
-  //   props.setGameState(prev => {return {...prev, score: {unicorn: currentUniScore, corgi: prev.score.corgi}}})
-  // }
 
   return (
     <div className="gameBoard">
-      {/* <div className="winnerAnnouncementWrapper">
-        {console.log("what is winner = ", winner)}
-      {winner === "unicorn wins" && <h2>UNICORN WINS!!!!</h2>}
-      {winner === "corgi wins" && <h2>CORGI WINS!!!!</h2>}
-      {winner === "no one wins" && <h2>LOSERS!!!!</h2>}
-      {props.gameState.winnerAnnouncement === null && <p>IT's NULL!</p>}
-      {props.gameState.winnerAnnouncement === "U" && <p>IT's a Unicorn winner!</p>}
-      {props.gameState.winnerAnnouncement === "C" && <p>IT's a Corgicorn winner!</p>}
-      </div> */}
-   
+ 
       <div className="gameBoardWrapper">
       {props.gameState.gameBoard.map(({index, display}) => {
         
