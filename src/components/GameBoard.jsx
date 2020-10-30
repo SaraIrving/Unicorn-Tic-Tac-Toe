@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Box from './Box'
-import useGameState from '../hooks/useGameState';
 
 export default function GameBoard (props) {
 
