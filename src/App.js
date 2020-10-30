@@ -38,7 +38,7 @@ function App() {
             {gameState.winnerAnnouncement !== null && <WinnerAnnouncement gameState={gameState} setGameState={setGameState}/>}
           </div>
           <div>
-            <p>The Score is: Unicorn: <span>{gameState.score.unicorn}</span> Corgi: <span>{gameState.score.corgi}</span></p>
+            <p>The Score is: <br></br>Unicorn: <span>{gameState.score.unicorn}</span> <br></br>Corgi: <span>{gameState.score.corgi}</span></p>
             <button onClick={event => setGameState(prev => {return {...prev, score: {unicorn: 0, corgi:0}}})}>RESET THE SCORE!</button>
             <button onClick={event => setGameState(prev => {return {...prev, gameBoard: gameBoardReset, winnerAnnouncement: null}})}>Play Again!</button>
           </div>
