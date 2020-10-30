@@ -8,17 +8,6 @@
   font-size: calc(10px + 2vmin);
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
 .App-header, footer {
   background-color: darkgreen;
   height: 60px;
@@ -29,21 +18,6 @@
   font-size: calc(10px + 2vmin);
   color: palegreen;
 }
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
 
 .playerIcon {
   max-width: 100px;
@@ -79,22 +53,11 @@
 }
 
 .playerWrapper {
-  /* height: 150px;
-  width: 250px; */
   height: 80%;
   width: 80%;
-  /* background-color: fuchsia; */
-  /* margin: 0.5em;
-  padding:1em; */
-  /* color: white; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  
   color: green;
   font-size: larger;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 .insidePlayerWrapper {
@@ -110,12 +73,8 @@ p {
 
 
 .winnerWrapper {
-  /* height: 150px;
-  width: 250px; */
   height: 80%;
   width: 80%;
-  /* margin: 10px;
-  padding: 20px; */
   color: fuchsia;
   border: 3px dotted green; 
   font-size: larger;
@@ -171,8 +130,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: auto; */
-  
 }
 
 button {
