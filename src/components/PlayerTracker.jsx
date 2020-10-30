@@ -1,11 +1,8 @@
 import React from 'react';
 import Corgi from './Corgi';
 import Unicorn from './Unicorn';
-import useGameState from '../hooks/useGameState';
 
 export default function PlayerTracker (props) {
-
-  //const {gameState, setGameState} = useGameState();
 
 
   return (
